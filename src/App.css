@@ -80,3 +80,12 @@ code {
   padding: 20px;
   /* Additional styling for your card content */
 }
+
+.trispace {
+  font-family: "Trispace", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
