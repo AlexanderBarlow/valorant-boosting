@@ -85,11 +85,17 @@ const LandingPage = () => {
       <div style={styles.topHalf}>
         <img src={bckgif} alt="Background" style={styles.backgroundImage} />
         <h2
-          style={{ zIndex: "1000", fontWeight: "bold", fontSize: "50px" }}
+          style={{ zIndex: "1000", fontWeight: "bold", fontSize: "50px", marginBottom: "10px" }}
           className="trispace"
         >
-          Valorant / LOL Boosting
+          Best Boosting Service.
         </h2>
+        <p
+          style={{ zIndex: "1000", fontWeight: "bold" }}
+          className="trispace"
+        >
+          For Gamers, By Gamers.
+        </p>
         <div style={styles.buttonContainer}>
           <Button variant="contained">Click Me</Button>
           <Button variant="contained">Click Me</Button>
@@ -120,7 +126,10 @@ const LandingPage = () => {
           }}
         >
           <div style={{ padding: "20px" }}>
-            <h3 className="trispace" style={{ color: "#489979", fontWeight: "bold", fontSize: "30px" }}>
+            <h3
+              className="trispace"
+              style={{ color: "#489979", fontWeight: "bold", fontSize: "30px" }}
+            >
               Built by Gamers
             </h3>
             <Card></Card>
