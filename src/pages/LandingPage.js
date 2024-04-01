@@ -8,11 +8,12 @@ import gold from "../assets/gold.png";
 import diamond from "../assets/diamond.png";
 import ascendant from "../assets/ascendant.png";
 import radiant from "../assets/radiant.png";
+import Card from "../components/card";
 
 const styles = {
   landingPage: {
     position: "relative",
-    height: "100vh",
+    height: "100%",
     display: "flex",
     flexDirection: "column",
   },
@@ -29,6 +30,14 @@ const styles = {
   },
   backgroundImage: {
     width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    position: "absolute",
+    top: 0,
+    left: 0,
+  },
+  secondImage: {
+    width: "50%",
     height: "100%",
     objectFit: "cover",
     position: "absolute",
@@ -55,15 +64,16 @@ const styles = {
   },
   rankContainer: {
     display: "flex",
-    width: "100%",
+    flexDirection: "row",
+    width: "50vw",
+    height: "100%",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems: "end",
     gap: "130px",
-
   },
   rankImage: {
-    width: "150px", // Adjust the width as needed
-    height: "150px",
+    width: "120px", // Adjust the width as needed
+    height: "120px",
     objectFit: "cover",
     zIndex: 2,
   },
@@ -86,14 +96,34 @@ const LandingPage = () => {
         </div>
       </div>
       <div style={styles.bottomHalf}>
-        <div className="cardOne" style={{ flexBasis: "50%" }}>
-          <img src={valBn} alt="Background" style={styles.backgroundImage} />
+        <div
+          className="left-side"
+          style={{
+            flexBasis: "50%",
+            backgroundColor: "inherit",
+            height: "100%",
+          }}
+        >
+          <img src={valBn} alt="Background" style={styles.secondImage} />
           <div className="rankContainer" style={styles.rankContainer}>
-            <img src={silver} alt="Silver" style={styles.rankImage} />
-            <img src={gold} alt="Gold" style={styles.rankImage} />
             <img src={diamond} alt="Diamond" style={styles.rankImage} />
             <img src={ascendant} alt="Ascendant" style={styles.rankImage} />
             <img src={radiant} alt="Radiant" style={styles.rankImage} />
+          </div>
+        </div>
+        <div
+          className="right-side"
+          style={{
+            flexBasis: "50%",
+            backgroundColor: "inherit",
+            height: "100%",
+          }}
+        >
+          <div style={{ padding: "20px" }}>
+            <h3 className="trispace" style={{ color: "#489979", fontWeight: "bold", fontSize: "30px" }}>
+              Built by Gamers
+            </h3>
+            <Card></Card>
           </div>
         </div>
       </div>
