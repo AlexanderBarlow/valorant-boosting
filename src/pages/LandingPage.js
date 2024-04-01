@@ -9,6 +9,7 @@ import diamond from "../assets/diamond.png";
 import ascendant from "../assets/ascendant.png";
 import radiant from "../assets/radiant.png";
 import Card from "../components/card";
+import LOL from "../assets/LOL.jpg";
 
 const styles = {
   landingPage: {
@@ -44,6 +45,14 @@ const styles = {
     top: 0,
     left: 0,
   },
+  thirdImage: {
+    width: "50%",
+    height: "100%",
+    objectFit: "cover",
+    position: "absolute",
+    top: "0",
+    right: "0",
+  },
   buttonContainer: {
     marginTop: "20px",
     display: "flex",
@@ -60,7 +69,6 @@ const styles = {
     justifyContent: "space-between",
     alignItems: "center",
     position: "relative",
-    border: "2px solid black",
   },
   rankContainer: {
     display: "flex",
@@ -85,15 +93,17 @@ const LandingPage = () => {
       <div style={styles.topHalf}>
         <img src={bckgif} alt="Background" style={styles.backgroundImage} />
         <h2
-          style={{ zIndex: "1000", fontWeight: "bold", fontSize: "50px", marginBottom: "10px" }}
+          style={{
+            zIndex: "1000",
+            fontWeight: "bold",
+            fontSize: "50px",
+            marginBottom: "10px",
+          }}
           className="trispace"
         >
           Best Boosting Service.
         </h2>
-        <p
-          style={{ zIndex: "1000", fontWeight: "bold" }}
-          className="trispace"
-        >
+        <p style={{ zIndex: "1000", fontWeight: "bold" }} className="trispace">
           For Gamers, By Gamers.
         </p>
         <div style={styles.buttonContainer}>
@@ -132,7 +142,42 @@ const LandingPage = () => {
             >
               Built by Gamers
             </h3>
+            {/* Your content for the right side */}
             <Card></Card>
+          </div>
+        </div>
+      </div>
+      <div style={styles.bottomHalf}>
+        <div
+          className="right-side"
+          style={{
+            flexBasis: "50%",
+            backgroundColor: "inherit",
+            height: "100%",
+          }}
+        >
+          <div style={{ padding: "20px" }}>
+            <h3
+              className="trispace"
+              style={{ color: "#489979", fontWeight: "bold", fontSize: "30px" }}
+            >
+              Built by Gamers
+            </h3>
+            {/* Your content for the right side */}
+            <Card></Card>
+          </div>
+        </div>
+        <div
+          className="left-side"
+          style={{
+            flexBasis: "50%",
+            backgroundColor: "inherit",
+            height: "100%",
+          }}
+        >
+          <img src={LOL} alt="Background" style={styles.thirdImage}/>
+          <div className="rankContainer" style={styles.rankContainer}>
+           
           </div>
         </div>
       </div>
