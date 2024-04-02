@@ -25,7 +25,7 @@ export default function MediaControlCard() {
           backgroundColor: "#039FDB",
           marginBottom: "10px",
         }}
-        className="trispace"
+        className="trispace cards"
       >
         <LockOpenIcon style={{ height: "100px", width: "100px" }} />
         <Box
@@ -51,7 +51,7 @@ export default function MediaControlCard() {
           backgroundColor: "#FFCA78",
           marginBottom: "10px",
         }}
-        className="trispace"
+        className="trispace cards"
       >
         <SupportAgentRoundedIcon style={{ height: "100px", width: "100px" }} />
         <Box
@@ -76,7 +76,7 @@ export default function MediaControlCard() {
           backgroundColor: "#CC3333",
           marginBottom: "10px",
         }}
-        className="trispace"
+        className="trispace cards"
       >
         <EmojiEventsRoundedIcon style={{ height: "100px", width: "100px" }} />
         <Box
@@ -89,7 +89,8 @@ export default function MediaControlCard() {
           <CardContent sx={{ flex: "1 0 auto" }}>
             <h2 className="trispace">Only the Best</h2>
             <p>
-              We only accept <span>Radiants and Immortals</span> for boosters. Ensuring that you are playing with top notch gamers.
+              We only accept <span>Radiants and Immortals</span> for boosters.
+              Ensuring that you are playing with top notch gamers.
             </p>
           </CardContent>
         </Box>
