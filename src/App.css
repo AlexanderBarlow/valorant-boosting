@@ -140,7 +140,8 @@ code {
   .cards {
     display: flex;
     flex: 100;
-    background: transparent !important;
+    opacity: .8;
+    color: #ffffff !important;
   }
 
   .rankImage {
