@@ -9,7 +9,10 @@ import diamond from "../assets/diamond.png";
 import ascendant from "../assets/ascendant.png";
 import radiant from "../assets/radiant.png";
 import Card from "../components/card";
-import LOL from "../assets/LOL.jpg";
+import LOL from "../assets/test.jpg";
+import LockOpenIcon from "@mui/icons-material/LockOpen";
+import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
+import EmojiEventsRoundedIcon from "@mui/icons-material/EmojiEventsRounded";
 
 const styles = {
   landingPage: {
@@ -46,12 +49,13 @@ const styles = {
     left: 0,
   },
   thirdImage: {
-    width: "50%",
+    width: "100%",
     height: "100%",
     objectFit: "cover",
     position: "absolute",
     top: "0",
     right: "0",
+    zIndex: -1,
   },
   buttonContainer: {
     marginTop: "20px",
@@ -154,6 +158,9 @@ const LandingPage = () => {
             flexBasis: "50%",
             backgroundColor: "inherit",
             height: "100%",
+            display: "flex",
+            justifyContent: "center", // Center the content horizontally
+            alignItems: "center", // Center the content vertically
           }}
         >
           <div style={{ padding: "20px" }}>
@@ -161,10 +168,51 @@ const LandingPage = () => {
               className="trispace"
               style={{ color: "#489979", fontWeight: "bold", fontSize: "30px" }}
             >
-              Built by Gamers
+              Why Us?
             </h3>
-            {/* Your content for the right side */}
-            <Card></Card>
+            <div style={{ display: "flex", gap: "30px" }}>
+              <div>
+                <LockOpenIcon
+                  style={{
+                    height: "100px",
+                    width: "100px",
+                    marginBottom: "0",
+                    marginRight: "50px",
+                    paddingBottom: "0",
+                  }}
+                />
+                <h3 style={{ marginTop: "0", paddingTop: "0" }}>
+                  Safe & Secure.
+                </h3>
+              </div>
+              <div>
+                <SupportAgentRoundedIcon
+                  style={{
+                    height: "100px",
+                    width: "100px",
+                    marginBottom: "0",
+                    marginRight: "50px",
+                  }}
+                />
+                <h3 style={{ marginTop: "0", paddingTop: "0" }}>
+                  Satisfaction Guaranteed
+                </h3>
+              </div>
+              <div>
+                <EmojiEventsRoundedIcon
+                  style={{
+                    height: "100px",
+                    width: "100px",
+                    marginBottom: "0",
+                    marginRight: "50px",
+                  }}
+                  sx={{ color: "black" }}
+                />
+                <h3 style={{ marginTop: "0", paddingTop: "0" }}>
+                  Elite Valorant Boosters
+                </h3>
+              </div>
+            </div>
           </div>
         </div>
         <div
@@ -175,10 +223,8 @@ const LandingPage = () => {
             height: "100%",
           }}
         >
-          <img src={LOL} alt="Background" style={styles.thirdImage}/>
-          <div className="rankContainer" style={styles.rankContainer}>
-           
-          </div>
+          <img src={LOL} alt="Background" style={styles.thirdImage} />
+          <div className="rankContainer" style={styles.rankContainer}></div>
         </div>
       </div>
     </div>
