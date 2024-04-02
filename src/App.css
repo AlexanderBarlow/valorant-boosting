@@ -90,3 +90,33 @@ code {
   font-variation-settings:
     "wdth" 100;
 }
+
+@media (max-width: 767px) {
+  .bottomHalf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+   #valBanner {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100vw !important;
+    margin: 0;
+    text-align: center;
+    top: auto;
+    left: auto;
+    z-index: -1;
+   }
+    .cards {
+    display: flex;
+    flex: 100;
+    }
+
+    .rankImage {
+      display: none;
+    }
+  
+  }

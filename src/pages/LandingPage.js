@@ -77,6 +77,13 @@ const styles = {
     alignItems: "center",
     position: "relative",
   },
+  bottomHalf2: {
+    flex: 1,
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    position: "relative",
+  },
   rankContainer: {
     display: "flex",
     flexDirection: "row",
@@ -138,17 +145,50 @@ const styles = {
   valLogo: {
     marginRight: "20px", // Adjust spacing between valLogo and slashedLine
   },
+  bottomHalfMobile: {
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    position: "relative",
+  },
+  valBnImage: {
+    width: "100%",
+    height: "auto",
+    objectFit: "cover",
+    zIndex: 1,
+  },
+  rankContainerMobile: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "end",
+    gap: "10px",
+    position: "absolute",
+    bottom: "20px",
+    left: 0,
+    right: 0,
+    zIndex: 2,
+  },
+  rankImageMobile: {
+    width: "80px",
+    height: "80px",
+    objectFit: "cover",
+  },
+  cardContainerMobile: {
+    width: "100%",
+    padding: "20px",
+    boxSizing: "border-box",
+    zIndex: 1,
+  },
 };
 
 const LandingPage = () => {
   const handleMouseEnter = (event) => {
     event.target.style.transform = "scale(1.2)";
-    // event.target.style.boxShadow = "0px 0px 10px rgba(255, 255, 255, 0.5)";
   };
 
   const handleMouseLeave = (event) => {
     event.target.style.transform = "scale(1)";
-    // event.target.style.boxShadow = "none";
   };
 
   return (
@@ -204,7 +244,8 @@ const LandingPage = () => {
           />
         </div>
       </div>
-      <div style={styles.bottomHalf}>
+
+      <div style={styles.bottomHalf} className="bottomHalf">
         <div
           className="left-side"
           style={{
@@ -213,11 +254,31 @@ const LandingPage = () => {
             height: "100%",
           }}
         >
-          <img src={valBn} alt="Background" style={styles.secondImage} />
+          <img
+            src={valBn}
+            alt="Background"
+            style={styles.secondImage}
+            id="valBanner"
+          />
           <div className="rankContainer" style={styles.rankContainer}>
-            <img src={diamond} alt="Diamond" style={styles.rankImage} />
-            <img src={ascendant} alt="Ascendant" style={styles.rankImage} />
-            <img src={radiant} alt="Radiant" style={styles.rankImage} />
+            <img
+              src={diamond}
+              alt="Diamond"
+              style={styles.rankImage}
+              className="rankImage"
+            />
+            <img
+              src={ascendant}
+              alt="Ascendant"
+              style={styles.rankImage}
+              className="rankImage"
+            />
+            <img
+              src={radiant}
+              alt="Radiant"
+              style={styles.rankImage}
+              className="rankImage"
+            />
           </div>
         </div>
         <div
@@ -236,11 +297,11 @@ const LandingPage = () => {
               Built by Gamers
             </h3>
             {/* Your content for the right side */}
-            <Card></Card>
+            <Card className="cards"></Card>
           </div>
         </div>
       </div>
-      <div style={styles.bottomHalf}>
+      <div style={styles.bottomHalf2} className="bottomHalf">
         <div
           className="right-side"
           style={{
