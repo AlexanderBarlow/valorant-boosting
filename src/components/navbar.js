@@ -49,7 +49,9 @@ function ResponsiveAppBar() {
         paddingBottom: "0",
       }}
     >
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" style={{ maxWidth: "100%" }}>
+        {" "}
+        {/* Set maxWidth to 100% */}
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography

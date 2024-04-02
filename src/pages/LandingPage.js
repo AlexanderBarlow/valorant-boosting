@@ -209,11 +209,11 @@ const LandingPage = () => {
         <p style={{ zIndex: "1000", fontWeight: "bold" }} className="trispace">
           For Gamers, By Gamers.
         </p>
-        <div style={styles.buttonContainer}>
+        <div style={styles.buttonContainer} className="buttonContainer">
           <Button variant="contained">Click Me</Button>
           <Button variant="contained">Click Me</Button>
         </div>
-        <div style={styles.logoContainer} id="valLogo">
+        <div style={styles.logoContainer} id="valLogo" className="logoContainer">
           <img
             src={valLogo}
             alt="Valorant Logo"
@@ -243,6 +243,7 @@ const LandingPage = () => {
               backgroundColor: "rgba(0, 0, 0, 0.5)",
               zIndex: "-1",
             }}
+            className="logoContainer"
           />
         </div>
       </div>
@@ -306,6 +307,7 @@ const LandingPage = () => {
       <div style={styles.bottomHalf2} className="bottomHalf">
         <div
           className="right-side"
+          id="lol"
           style={{
             flexBasis: "50%",
             backgroundColor: "inherit",
@@ -323,7 +325,7 @@ const LandingPage = () => {
               Why Us?
             </h3>
             <div style={{ display: "flex", gap: "30px" }}>
-              <div>
+              <div className="muiIcon">
                 <LockOpenIcon
                   style={{
                     height: "100px",
@@ -332,13 +334,15 @@ const LandingPage = () => {
                     marginRight: "50px",
                     paddingBottom: "0",
                   }}
+                  className="icon"
                 />
                 <h3 style={{ marginTop: "0", paddingTop: "0" }}>
                   Safe & Secure.
                 </h3>
               </div>
-              <div>
+              <div className="muiIcon">
                 <SupportAgentRoundedIcon
+                  className="icon"
                   style={{
                     height: "100px",
                     width: "100px",
@@ -350,7 +354,7 @@ const LandingPage = () => {
                   Satisfaction Guaranteed
                 </h3>
               </div>
-              <div>
+              <div className="muiIcon">
                 <EmojiEventsRoundedIcon
                   style={{
                     height: "100px",
@@ -358,6 +362,7 @@ const LandingPage = () => {
                     marginBottom: "0",
                     marginRight: "50px",
                   }}
+                  className="icon"
                   sx={{ color: "black" }}
                 />
                 <h3 style={{ marginTop: "0", paddingTop: "0" }}>
