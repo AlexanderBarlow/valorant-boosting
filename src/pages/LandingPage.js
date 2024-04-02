@@ -213,22 +213,24 @@ const LandingPage = () => {
           <Button variant="contained">Click Me</Button>
           <Button variant="contained">Click Me</Button>
         </div>
-        <div style={styles.logoContainer}>
+        <div style={styles.logoContainer} id="valLogo">
           <img
             src={valLogo}
             alt="Valorant Logo"
             style={styles.logoImage}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
+            className="logoImage"
           />
-          <div style={styles.slashedLine}></div>
-          <div style={styles.stackedLogoContainer}>
+          <div style={styles.slashedLine} id="slash"></div>
+          <div style={styles.stackedLogoContainer} id="lolLogo">
             <img
               src={lollogo}
               alt="LoL Logo"
               style={styles.stackedLogoImage}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
+              className="logoImage"
             />
           </div>
           <div
