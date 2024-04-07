@@ -36,6 +36,10 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+   const handleRedirect = () => {
+     window.location.replace("/");
+   };
+
   return (
     <AppBar
       position="fixed"
@@ -69,6 +73,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
               fontSize: "1.2rem", // Increase text size
             }}
+            onClick={handleRedirect}
           >
             LOGO
           </Typography>

@@ -17,7 +17,6 @@ import valLogo from "../assets/vallogo4.png";
 import lollogo from "../assets/lollogo.png";
 import lollogo2 from "../assets/lologo.png";
 
-
 const styles = {
   landingPage: {
     position: "relative",
@@ -192,73 +191,8 @@ const LandingPage = () => {
     event.target.style.transform = "scale(1)";
   };
 
-  const handleValRedirect = () => {
-    window.location.replace("/valorant");
-  };
-
-   const handleLeagueRedirect = () => {
-     window.location.replace("/league");
-   };
-
   return (
     <div style={styles.landingPage}>
-      <div style={styles.topHalf}>
-        <img src={bckgif} alt="Background" style={styles.backgroundImage} />
-        <h2
-          style={{
-            zIndex: "1000",
-            fontWeight: "bold",
-            fontSize: "50px",
-            marginBottom: "10px",
-          }}
-          className="trispace"
-        >
-          Best Boosting Service.
-        </h2>
-        <p style={{ zIndex: "1000", fontWeight: "bold" }} className="trispace">
-          For Gamers, By Gamers.
-        </p>
-        <div style={styles.buttonContainer} className="buttonContainer">
-          <Button variant="contained">Click Me</Button>
-          <Button variant="contained">Click Me</Button>
-        </div>
-        <div style={styles.logoContainer} id="valLogo" className="logoContainer">
-          <img
-            src={valLogo}
-            alt="Valorant Logo"
-            style={styles.logoImage}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            className="logoImage"
-            onClick={handleValRedirect}
-          />
-          <div style={styles.slashedLine} id="slash"></div>
-          <div style={styles.stackedLogoContainer} id="lolLogo">
-            <img
-              src={lollogo}
-              alt="LoL Logo"
-              style={styles.stackedLogoImage}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              className="logoImage"
-              onClick={handleLeagueRedirect}
-            />
-          </div>
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
-              zIndex: "-1",
-            }}
-            className="logoContainer"
-          />
-        </div>
-      </div>
-
       <div style={styles.bottomHalf} className="bottomHalf">
         <div
           className="left-side"
